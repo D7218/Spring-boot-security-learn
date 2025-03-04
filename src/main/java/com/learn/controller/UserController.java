@@ -17,12 +17,15 @@ public class UserController {
     // all users
     @GetMapping("/")
     public List<User> getAllUsers(){
+    	System.out.println("hello sequrity");
         return this.userService.getAllUsers();
     }
+    
+  
     //return single user
     @GetMapping("/{username}")
     public User getUser(@PathVariable String username){
-
+        
         return this.userService.getUser(username);
     }
     @PostMapping("/")

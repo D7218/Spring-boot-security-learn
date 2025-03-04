@@ -5,9 +5,6 @@ public class User {
     String password;
     String email;
 
-    public User() {
-    }
-
     public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
@@ -36,5 +33,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
